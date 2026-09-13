@@ -220,9 +220,9 @@ body {
 .main-content h4 {
     font-size: 18px;
     color: #111;
+    margin-bottom: 10px;
     border-bottom: 2px solid #cc0000;
     display: inline-block;
-    padding-bottom: 5px;
 }
 
 .main-content p {
@@ -235,8 +235,8 @@ body {
 
 .main-content ul {
     font-size: 16px;
-    line-height: 1.8;
     color: #555;
+    line-height: 1.8;
     margin-left: 50px;
     margin-bottom: 20px;
     text-align: justify;
