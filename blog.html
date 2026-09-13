@@ -1,172 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahmad Dhani - Blog</title>
 
-    <title>Ahmad Dhani - Portofolio</title>
+        <link rel="stylesheet" href="blog.css" />
+    </head>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile-wrapper">
-                <img
-                    src="data:image/jpeg;base64,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"
-                    alt="Foto Ahmad Dhani"
-                    class="profile-img">
-
-                <span class="profile-number">19</span>
-            </div>
-
-
-            <div class="sidebar-content">
-                <span class="eyebrow">DEWA 19</span>
-                <h1>Ahmad Dhani</h1>
-                <h2>Musisi · Komposer · Seniman</h2>
-                <div class="divider"></div>
-                <p>
-                    Sosok di balik karya-karya ikonik Dewa 19.
-                    Musik, lirik, dan perjalanan panjang yang
-                    meninggalkan jejak dalam sejarah musik Indonesia.
-                </p>
-            </div>
-        </aside>
-
-
-       
-        <main class="main-content">
-
-            <header class="main-header">
-
-                <h3>Karya Nyata & Warisan Musik</h3>
-
-                <p>
-                    Pilar perjalanan musik, karya, dan kontribusi
-                    Ahmad Dhani dalam industri musik Indonesia.
-                </p>
-
-            </header>
-
-
-            <section class="cards">
-                <div class="card">
-
+    <body>
+        <div class="container">
+            <aside class="sidebar">
+                <div class="profile-wrapper">
                     <img
-                        src="https://awsimages.detik.net.id/community/media/visual/2022/11/06/konser-30-tahun-berkarya-aksi-dewa-19-hibur-penonton-di-padang.jpeg?w=700&q=90">
+                        src="https://cdn-jjmn.jawapos.com/images/15/2025/04/25/p_0582723001579149555dahmaddhani2-406901586.jpg"
+                        alt="Ahmad Dhani"
+                        class="profile-img"
+                    />
 
-                    <h4>Dewa 19</h4>
-
-                    <p>
-                        Salah satu band legendaris Indonesia yang
-                        menjadi bagian penting dalam perjalanan
-                        musik Ahmad Dhani.
-                    </p>
-
+                    <span class="profile-number">19</span>
                 </div>
 
+                <div class="sidebar-content">
+                    <span class="eyebrow">DEWA 19</span>
+                    <h1>Ahmad Dhani</h1>
+                    <h2>Musisi · Komposer · Seniman</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Sosok di balik karya-karya ikonik Dewa 19. Musik, lirik, dan perjalanan
+                        panjang yang meninggalkan jejak dalam sejarah musik Indonesia.
+                    </p>
+                </div>
+            </aside>
 
-            
-                <div class="card">
-
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoYhYUMNR6bCYEuR8mfa1yxv3ZoTGY6AblwGaGUa2uTg&s=10"
-                        alt="Karya Musik"
-                    >
-
-                    <h4>Karya Musik</h4>
+            <main class="main-content">
+                <header class="main-header">
+                    <h3>Blog Musik</h3>
 
                     <p>
-                        Berbagai lagu dan komposisi yang menjadi
-                        bagian dari perjalanan panjang sebagai
-                        musisi dan komposer.
+                        Pilar perjalanan musik, karya, dan kontribusi Ahmad Dhani dalam industri
+                        musik Indonesia.
                     </p>
+                </header>
 
-                </div>
+                <section id="blog">
+                    <section class="cards">
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&q=80"
+                                alt="Musik dan headphone"
+                            />
+                            <h4>Musik dan Perasaan</h4>
+                            <p>
+                                Musik sering menjadi bagian dari berbagai suasana, dari menemani
+                                perjalanan hingga menjadi pengingat sebuah momen yang pernah
+                                dilalui.
+                            </p>
+                        </a>
 
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80"
+                                alt="Konser musik"
+                            />
+                            <h4>Serunya Menonton Konser</h4>
+                            <p>
+                                Menikmati musik secara langsung memberikan pengalaman yang berbeda
+                                karena energi musisi dan penonton dapat dirasakan dalam satu tempat.
+                            </p>
+                        </a>
 
-                
-                <div class="card">
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80"
+                                alt="Penyanyi di atas panggung"
+                            />
+                            <h4>Mengenal Dunia Musik</h4>
+                            <p>
+                                Dunia musik memiliki banyak genre, karakter, dan cerita yang menarik
+                                untuk dikenal lebih jauh melalui karya para musisi.
+                            </p>
+                        </a>
 
-                    <img
-                        src="https://dewatiket.id/blog/wp-content/uploads/2023/05/Lagu-ciptaan-Ahmad-Dhani.jpg"
-                        alt="Komposer"
-                    >
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80"
+                                alt="Studio musik"
+                            />
+                            <h4>Di Balik Sebuah Lagu</h4>
+                            <p>
+                                Sebuah lagu melewati banyak proses sebelum didengarkan, mulai dari
+                                ide, penulisan, aransemen, rekaman, hingga proses produksi.
+                            </p>
+                        </a>
 
-                    <h4>Komposer</h4>
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&q=80"
+                                alt="Festival musik"
+                            />
+                            <h4>Musik dan Generasi</h4>
+                            <p>
+                                Selera musik dapat berubah mengikuti zaman, tetapi lagu-lagu
+                                tertentu mampu tetap dikenal dan dinikmati oleh generasi yang
+                                berbeda.
+                            </p>
+                        </a>
 
-                    <p>
-                        Menghasilkan berbagai karya musik dengan
-                        karakter musikal yang kuat dan khas.
-                    </p>
-
-                </div>
-
-
-              
-                <div class="card">
-
-                    <img
-                        src="https://media.suara.com/pictures/970x544/2023/07/29/20800-kontroversi-ahmad-dhani-instagramatahmaddhaniofficial.jpg"
-                        alt="Konser"
-                    >
-
-                    <h4>Konser & Pertunjukan</h4>
-
-                    <p>
-                        Perjalanan di atas panggung bersama
-                        Dewa 19 dan berbagai proyek musik lainnya.
-                    </p>
-
-                </div>
-
-
-               
-                <div class="card">
-
-                    <img
-                        src="https://media.suara.com/pictures/970x544/2023/07/29/20800-kontroversi-ahmad-dhani-instagramatahmaddhaniofficial.jpg"
-                        alt="Musik Indonesia"
-                    >
-
-                    <h4>Musik Indonesia</h4>
-
-                    <p>
-                        Kontribusi terhadap perkembangan industri
-                        musik dan budaya populer Indonesia.
-                    </p>
-
-                </div>
-
-
-                
-                <div class="card">
-
-                    <img
-                        src="https://media.suara.com/pictures/970x544/2023/07/29/20800-kontroversi-ahmad-dhani-instagramatahmaddhaniofficial.jpg"
-                        alt="Warisan Karya"
-                    >
-
-                    <h4>Warisan Karya</h4>
-
-                    <p>
-                        Karya-karya yang terus dikenang dan
-                        didengarkan oleh berbagai generasi.
-                    </p>
-
-                </div>
-
-
-            </section>
-
-        </main>
-
-    </div>
-
-</body>
-
+                        <a href="/detail.html" class="card">
+                            <img
+                                src="https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=800&q=80"
+                                alt="Musisi bermain gitar"
+                            />
+                            <h4>Cerita dari Sebuah Lagu</h4>
+                            <p>
+                                Di balik sebuah lagu sering terdapat cerita, pengalaman, dan
+                                inspirasi yang membuat karya tersebut memiliki makna bagi
+                                pendengarnya.
+                            </p>
+                        </a>
+                    </section>
+                </section>
+            </main>
+        </div>
+    </body>
 </html>
